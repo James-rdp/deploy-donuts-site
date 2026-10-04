@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Deploy & Donuts</title>
+  <meta name="description" content="Websites, local visibility and campaigns for independent businesses ready to grow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper:#f5f2e8;
+      --ink:#12110e;
+      --red:#ff4d2e;
+      --yellow:#f6d83d;
+      --blue:#45c7e8;
+      --pink:#ff96b5;
+      --muted:#5e5b53;
+      --line:#191713;
+      --panel:#fffdf5;
+      --shadow:6px 6px 0 var(--ink);
+      --max:1240px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper:#11110f;
+        --ink:#f8f3e6;
+        --muted:#c2bdb0;
+        --line:#f8f3e6;
+        --panel:#1b1a17;
+        --shadow:6px 6px 0 #000;
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",sans-serif;overflow-x:hidden}
+    a{color:inherit}
+    button{font:inherit;color:inherit}
+    ::selection{background:var(--yellow);color:#111}
+    .noise{position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+    .skip{position:absolute;left:10px;top:10px;background:var(--ink);color:var(--paper);padding:10px;z-index:30;transform:translateY(-200%)}.skip:focus{transform:translateY(0)}
+    .nav{width:min(var(--max),calc(100% - 40px));margin:auto;padding:20px 0 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+    .nav-links{display:flex;gap:24px}.nav a{text-decoration:none}.nav a:hover{text-decoration:underline;text-decoration-thickness:2px}
+    .status{display:flex;align-items:center;gap:8px;font-weight:600}.status i{width:9px;height:9px;background:var(--red);display:block;border-radius:50%;animation:pulse 1.6s infinite}
+    @keyframes pulse{50%{transform:scale(1.7);opacity:.55}}
+
+    main{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .hero{min-height:700px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(340px,.75fr);align-items:center;gap:42px;padding:58px 0 48px}
+    .hero-copy{position:relative;z-index:2}.stamp{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#111;border:2px solid #111;padding:9px 13px;font:600 .78rem "IBM Plex Mono",monospace;transform:rotate(-2deg);box-shadow:3px 3px 0 #111;margin-bottom:28px}
+    h1{font:400 clamp(3.5rem,7vw,7.4rem)/.84 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.055em;margin:0;max-width:910px}
+    h1 span{display:block}.outline{-webkit-text-stroke:2px var(--ink);color:transparent}
+    .hero-sub{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;margin-top:34px;max-width:760px}.hero-sub p{font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.5;margin:0;max-width:560px;font-weight:600}.arrow-link{display:inline-grid;place-items:center;width:70px;height:70px;background:var(--red);color:#111;border:2px solid #111;border-radius:50%;font-size:2rem;text-decoration:none;box-shadow:4px 4px 0 #111;transition:transform .2s}.arrow-link:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 #111}
+
+    .hero-art{position:relative;min-height:520px;isolation:isolate}.orbit{position:absolute;inset:50% auto auto 50%;width:420px;height:420px;transform:translate(-50%,-50%);border:2px dashed var(--line);border-radius:50%;animation:spin 18s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;width:20px;height:20px;border:2px solid #111;background:var(--blue);border-radius:50%;top:20px;left:55px}.orbit:after{background:var(--yellow);top:auto;left:auto;right:15px;bottom:90px;width:32px;height:32px}
+    @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+    .donut-wrap{position:absolute;inset:50% auto auto 50%;width:330px;height:330px;transform:translate(-50%,-50%) rotate(-8deg);filter:drop-shadow(16px 20px 0 rgba(18,17,14,.18));animation:float 4.5s ease-in-out infinite}.donut-wrap svg{width:100%;height:100%;overflow:visible}.donut-main{fill:var(--red);stroke:#111;stroke-width:8}.icing{fill:#ff9fbd;stroke:#111;stroke-width:7}.hole{fill:var(--paper);stroke:#111;stroke-width:8}.sprinkle{stroke:#111;stroke-width:8;stroke-linecap:round}
+    @keyframes float{50%{transform:translate(-50%,-54%) rotate(4deg)}}
+    .art-tag{position:absolute;font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase;background:var(--panel);border:2px solid var(--line);padding:10px 12px;box-shadow:3px 3px 0 var(--ink)}
+    .tag-a{top:8%;right:2%;transform:rotate(4deg)}.tag-b{bottom:8%;left:-3%;transform:rotate(-5deg);background:var(--blue);color:#111}.cursor-dot{position:absolute;width:62px;height:62px;border:2px solid #111;background:var(--yellow);clip-path:polygon(0 0,78% 63%,48% 68%,36% 100%);right:4%;bottom:18%;animation:nudge 2.4s steps(2,end) infinite}
+    @keyframes nudge{50%{transform:translate(-15px,-8px) rotate(-8deg)}}
+
+    .ticker{border-block:2px solid var(--line);overflow:hidden;background:var(--ink);color:var(--paper);width:100vw;margin-left:calc(50% - 50vw)}.ticker-track{display:flex;width:max-content;animation:marquee 23s linear infinite}.ticker-track span{font:500 .82rem "IBM Plex Mono",monospace;text-transform:uppercase;padding:14px 0}.ticker-track b{color:var(--red);padding:0 24px}@keyframes marquee{to{transform:translateX(-50%)}}
+
+    .section{padding:100px 0;border-bottom:2px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:160px 1fr;gap:32px;margin-bottom:52px}.index{font:600 .8rem "IBM Plex Mono",monospace;text-transform:uppercase}.section h2{font:400 clamp(2.7rem,5.5vw,6rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:0;max-width:980px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--line)}.service{padding:28px;min-height:350px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:var(--panel)}.service+ .service{border-left:2px solid var(--line)}.service:nth-child(2){background:var(--yellow);color:#111}.service:nth-child(3){background:var(--blue);color:#111}.service-num{font:600 .8rem "IBM Plex Mono",monospace}.service h3{font:400 clamp(2rem,3vw,3.5rem)/.94 "Archivo Black",sans-serif;text-transform:uppercase;margin:28px 0 14px}.service p{line-height:1.55;margin:0;max-width:30ch;font-weight:600}.service .glyph{position:absolute;right:-25px;bottom:-20px;font:400 11rem/.8 "Archivo Black",sans-serif;opacity:.1;transform:rotate(-8deg)}
+
+    .lab{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.chooser{position:sticky;top:28px}.chooser p{font-size:1.18rem;line-height:1.5;max-width:520px;font-weight:600}.pills{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.pill{border:2px solid var(--line);background:transparent;border-radius:100px;padding:11px 16px;cursor:pointer;font:600 .78rem "IBM Plex Mono",monospace;text-transform:uppercase}.pill:hover,.pill.active{background:var(--ink);color:var(--paper)}.lab-output{border:2px solid #111;background:var(--red);color:#111;padding:24px;box-shadow:var(--shadow);min-height:360px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(1deg)}.lab-output .browser{border:2px solid #111;background:#f8f3e6}.browser-top{display:flex;gap:7px;padding:10px;border-bottom:2px solid #111}.browser-top i{width:10px;height:10px;border:2px solid #111;border-radius:50%;background:var(--yellow)}.browser-top i:nth-child(2){background:var(--pink)}.browser-top i:nth-child(3){background:var(--blue)}.browser-body{padding:22px;min-height:190px;display:grid;align-content:center}.browser-body small{font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase}.browser-body strong{font:400 clamp(2.4rem,5vw,5rem)/.9 "Archivo Black",sans-serif;text-transform:uppercase;margin-top:14px}.output-note{font:600 .75rem "IBM Plex Mono",monospace;text-transform:uppercase;margin-top:26px}
+
+    .manifesto{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end}.manifesto h2{max-width:700px}.principles{list-style:none;padding:0;margin:0;border-top:2px solid var(--line)}.principles li{display:grid;grid-template-columns:42px 1fr;gap:16px;padding:20px 0;border-bottom:2px solid var(--line);font-weight:700;font-size:1.05rem}.principles span{font:600 .75rem "IBM Plex Mono",monospace;color:var(--red)}
+
+    .cta{padding:110px 0 80px;text-align:center}.cta .mini{font:600 .78rem "IBM Plex Mono",monospace;text-transform:uppercase}.cta h2{margin:20px auto 36px;max-width:1000px}.cta-link{display:inline-flex;align-items:center;gap:18px;background:var(--yellow);color:#111;border:2px solid #111;padding:17px 22px;text-decoration:none;font:600 .84rem "IBM Plex Mono",monospace;text-transform:uppercase;box-shadow:5px 5px 0 #111;transition:transform .2s}.cta-link:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 #111}.cta-link b{font-size:1.4rem}
+    footer{border-top:2px solid var(--line);display:flex;justify-content:space-between;gap:30px;padding:24px 0 38px;font:500 .75rem "IBM Plex Mono",monospace;text-transform:uppercase}.footer-name{font-weight:600}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;padding-top:48px}.hero-art{min-height:430px}.section-head{grid-template-columns:1fr;gap:14px}.services{grid-template-columns:1fr}.service{min-height:280px}.service+.service{border-left:0;border-top:2px solid var(--line)}.lab,.manifesto{grid-template-columns:1fr}.chooser{position:static}.manifesto{gap:40px}
+    }
+    @media (max-width:560px){
+      .nav{width:calc(100% - 24px)}main{width:calc(100% - 24px)}.nav-links a:not(:first-child){display:none}.nav{font-size:.69rem}.hero{min-height:auto;padding:42px 0 28px;gap:8px}.stamp{margin-bottom:22px;font-size:.67rem}h1{font-size:clamp(3rem,18vw,5rem);line-height:.86}.outline{-webkit-text-stroke:1.5px var(--ink)}.hero-sub{grid-template-columns:1fr auto;margin-top:26px}.hero-sub p{font-size:1rem}.arrow-link{width:55px;height:55px}.hero-art{min-height:370px}.orbit{width:310px;height:310px}.donut-wrap{width:245px;height:245px}.tag-a{right:0}.tag-b{left:0}.cursor-dot{width:48px;height:48px}.section{padding:72px 0}.services .service{padding:22px}.section h2{font-size:clamp(2.5rem,13vw,4rem)}.section-head{margin-bottom:34px}.lab-output{min-height:320px;padding:16px}.browser-body{padding:18px}.manifesto{gap:34px}.cta{padding:80px 0 62px}.cta-link{width:100%;justify-content:center}footer{flex-direction:column;padding-bottom:28px}.ticker-track span{font-size:.7rem}
+    }
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.orbit,.donut-wrap,.ticker-track,.cursor-dot,.status i{animation:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-links"><a href="#work">What we do</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div>
+    <div class="status"><i aria-hidden="true"></i>Taking on 2 new projects</div>
+  </nav>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="stamp">Deploy & Donuts / Independent brands deserve big-brand energy</div>
+        <h1 id="hero-title"><span>We build brands</span><span class="outline">people can’t</span><span>scroll past.</span></h1>
+        <div class="hero-sub">
+          <p>Sharp websites, local visibility and campaigns built to turn curiosity into customers.</p>
+          <a class="arrow-link" href="#work" aria-label="See what we do">↓</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Animated illustrated donut orbiting a design canvas">
+        <div class="orbit" aria-hidden="true"></div>
+        <div class="donut-wrap" aria-hidden="true">
+          <svg viewBox="0 0 360 360" role="img">
+            <path class="donut-main" fill-rule="evenodd" d="M180 25C96 25 27 92 27 178c0 86 69 157 153 157s153-71 153-157C333 92 264 25 180 25Zm0 105c29 0 53 22 53 50s-24 50-53 50-53-22-53-50 24-50 53-50Z"/>
+            <path class="icing" fill-rule="evenodd" d="M180 42C108 42 48 98 45 169c20-9 31 6 50 1 17-4 24-24 44-21 19 3 23 22 40 24 20 3 30-18 51-16 18 2 28 18 49 13 14-3 25-12 34-4-5-69-62-124-133-124Zm0 88c29 0 53 22 53 50s-24 50-53 50-53-22-53-50 24-50 53-50Z"/>
+            <path class="hole" d="M180 130c29 0 53 22 53 50s-24 50-53 50-53-22-53-50 24-50 53-50Z"/>
+            <path class="sprinkle" d="M95 105l17 8M149 73l-3 18M210 78l13 13M260 109l-16 8M78 146l12 10M286 146l-16 2M127 124l13-9M229 126l-8-14"/>
+          </svg>
+        </div>
+        <div class="art-tag tag-a">Design that earns attention ↗</div>
+        <div class="art-tag tag-b">Strategy, with sprinkles</div>
+        <div class="cursor-dot" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Web design <b>✦</b> Local SEO <b>✦</b> Google Ads <b>✦</b> Brand systems <b>✦</b> Conversion strategy <b>✦</b> Web design <b>✦</b> Local SEO <b>✦</b> Google Ads <b>✦</b> Brand systems <b>✦</b> Conversion strategy <b>✦</b></span><span>Web design <b>✦</b> Local SEO <b>✦</b> Google Ads <b>✦</b> Brand systems <b>✦</b> Conversion strategy <b>✦</b> Web design <b>✦</b> Local SEO <b>✦</b> Google Ads <b>✦</b> Brand systems <b>✦</b> Conversion strategy <b>✦</b></span></div></div>
+
+  <main>
+    <section class="section" id="work">
+      <div class="section-head"><div class="index">01 / The stack</div><h2>One small studio. Three ways to make noise.</h2></div>
+      <div class="services">
+        <article class="service"><span class="service-num">01</span><div><h3>Look<br>unmissable</h3><p>Websites and brand systems with enough personality to be remembered and enough clarity to convert.</p></div><span class="glyph" aria-hidden="true">Aa</span></article>
+        <article class="service"><span class="service-num">02</span><div><h3>Get<br>found</h3><p>Local SEO and search strategy that puts you in front of people already looking for what you do.</p></div><span class="glyph" aria-hidden="true">↗</span></article>
+        <article class="service"><span class="service-num">03</span><div><h3>Sell<br>more</h3><p>Google Ads and conversion fixes that turn expensive clicks into real calls, bookings and orders.</p></div><span class="glyph" aria-hidden="true">$</span></article>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="section-head"><div class="index">02 / The idea lab</div><h2>Pick the problem. Watch the plan take shape.</h2></div>
+      <div class="lab">
+        <div class="chooser">
+          <p>Most agencies start with a service list. We start with the thing keeping your business stuck.</p>
+          <div class="pills" role="group" aria-label="Choose a business challenge">
+            <button class="pill active" data-copy="More calls" data-note="Local search + a frictionless conversion path">Need more leads</button>
+            <button class="pill" data-copy="More regulars" data-note="Retention campaigns + offers people want">Need repeat customers</button>
+            <button class="pill" data-copy="A better first impression" data-note="Positioning + a website built to be remembered">Website feels dated</button>
+          </div>
+          <p>Then we build the shortest, smartest route from “never heard of you” to “where do I sign?”</p>
+        </div>
+        <div class="lab-output" aria-live="polite">
+          <div class="browser">
+            <div class="browser-top"><i></i><i></i><i></i></div>
+            <div class="browser-body"><small>The outcome</small><strong id="outcome">More calls</strong></div>
+          </div>
+          <div class="output-note" id="plan">Local search + a frictionless conversion path</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section manifesto">
+      <div><div class="index">03 / House rules</div><h2>Less agency theatre. More work that works.</h2></div>
+      <ol class="principles">
+        <li><span>01</span>Plain-English strategy. No jargon fog.</li>
+        <li><span>02</span>Fast decisions. Fewer meetings.</li>
+        <li><span>03</span>Design with a job, not decoration for decoration’s sake.</li>
+        <li><span>04</span>Launch, learn, improve. Momentum beats perfection.</li>
+      </ol>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="mini">Have a business worth noticing?</div>
+      <h2>Let’s make the internet care.</h2>
+      <a class="cta-link" href="#work"><span>See how we make noise</span><b>↑</b></a>
+    </section>
+
+    <footer><div class="footer-name">Deploy & Donuts</div><div>Built with caffeine, curiosity & clean code.</div><div>© 2026</div></footer>
+  </main>
+
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.pill');
+      var outcome = document.getElementById('outcome');
+      var plan = document.getElementById('plan');
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          buttons.forEach(function (item) { item.classList.remove('active'); });
+          button.classList.add('active');
+          outcome.textContent = button.getAttribute('data-copy');
+          plan.textContent = button.getAttribute('data-note');
+        });
+      });
+    }());
+  </script>
+</body>
+</html>
