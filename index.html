@@ -63,33 +63,39 @@
     .tag-a{top:8%;right:2%;transform:rotate(4deg)}.tag-b{bottom:8%;left:-3%;transform:rotate(-5deg);background:var(--blue);color:#111}.cursor-dot{position:absolute;width:62px;height:62px;border:2px solid #111;background:var(--yellow);clip-path:polygon(0 0,78% 63%,48% 68%,36% 100%);right:4%;bottom:18%;animation:nudge 2.4s steps(2,end) infinite}
     @keyframes nudge{50%{transform:translate(-15px,-8px) rotate(-8deg)}}
 
-    .ticker{border-block:2px solid var(--line);overflow:hidden;background:var(--ink);color:var(--paper);width:100vw;margin-left:calc(50% - 50vw)}.ticker-track{display:flex;width:max-content;animation:marquee 23s linear infinite}.ticker-track span{font:500 .82rem "IBM Plex Mono",monospace;text-transform:uppercase;padding:14px 0}.ticker-track b{color:var(--red);padding:0 24px}@keyframes marquee{to{transform:translateX(-50%)}}
+    .ticker{border-block:2px solid var(--line);overflow:hidden;background:var(--ink);color:var(--paper);width:100%;margin-left:0}.ticker-track{display:flex;width:max-content;animation:marquee 23s linear infinite}.ticker-track span{font:500 .82rem "IBM Plex Mono",monospace;text-transform:uppercase;padding:14px 0}.ticker-track b{color:var(--red);padding:0 24px}@keyframes marquee{to{transform:translateX(-50%)}}
 
     .section{padding:100px 0;border-bottom:2px solid var(--line)}
     .section-head{display:grid;grid-template-columns:160px 1fr;gap:32px;margin-bottom:52px}.index{font:600 .8rem "IBM Plex Mono",monospace;text-transform:uppercase}.section h2{font:400 clamp(2.7rem,5.5vw,6rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:0;max-width:980px}
     .services{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--line)}.service{padding:28px;min-height:350px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:var(--panel)}.service+ .service{border-left:2px solid var(--line)}.service:nth-child(2){background:var(--yellow);color:#111}.service:nth-child(3){background:var(--blue);color:#111}.service-num{font:600 .8rem "IBM Plex Mono",monospace}.service h3{font:400 clamp(2rem,3vw,3.5rem)/.94 "Archivo Black",sans-serif;text-transform:uppercase;margin:28px 0 14px}.service p{line-height:1.55;margin:0;max-width:30ch;font-weight:600}.service .glyph{position:absolute;right:-25px;bottom:-20px;font:400 11rem/.8 "Archivo Black",sans-serif;opacity:.1;transform:rotate(-8deg)}
 
+    .projects{display:grid;gap:36px}.project-card{border:2px solid var(--line);background:var(--panel);box-shadow:var(--shadow);overflow:hidden}.project-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 16px;border-bottom:2px solid #111;background:var(--yellow);color:#111;font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase}.project-bar span:last-child{opacity:.68}.project-layout{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);min-height:590px}.project-copy{padding:34px;display:flex;flex-direction:column;justify-content:space-between;border-right:2px solid var(--line)}.project-kicker{font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase;color:var(--red)}.project-copy h3{font:400 clamp(2.4rem,4vw,4.8rem)/.9 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:16px 0 22px}.project-copy>div>p{font-size:1.05rem;line-height:1.55;font-weight:600;max-width:39ch;margin:0}.structure-list{list-style:none;padding:0;margin:34px 0;border-top:2px solid var(--line)}.structure-list li{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:11px 0;border-bottom:2px solid var(--line);font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase}.structure-list span{color:var(--red)}.site-link{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;width:100%;border:2px solid var(--line);padding:14px 16px;text-decoration:none;font:600 .76rem "IBM Plex Mono",monospace;text-transform:uppercase;background:var(--ink);color:var(--paper)}.site-link:hover{background:var(--red);color:#111;border-color:#111}.project-visual{padding:34px;display:grid;place-items:center;position:relative;overflow:hidden;background:#e8e2d2}.project-card.pet .project-visual{background:#a9d8bd}.case-browser{width:min(100%,720px);border:3px solid #111;background:#fff;box-shadow:13px 15px 0 rgba(17,17,17,.24);transform:rotate(1.2deg);transition:transform .3s}.project-card.pet .case-browser{transform:rotate(-1.2deg)}.project-card:hover .case-browser{transform:rotate(0deg) translateY(-5px)}.case-top{height:36px;border-bottom:3px solid #111;display:flex;align-items:center;gap:7px;padding:0 12px;background:#f6f2e8;color:#111}.case-top i{width:9px;height:9px;border:1.5px solid #111;border-radius:50%;background:#ff654b}.case-top i:nth-child(2){background:#f6d83d}.case-top i:nth-child(3){background:#55c6a5}.case-url{margin-left:8px;font:600 .56rem "IBM Plex Mono",monospace;opacity:.62}.site-canvas{color:#111;min-height:430px;overflow:hidden;position:relative}.tk-home{background:#f4efe2}.mock-nav{height:50px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(17,17,17,.16);font:600 .55rem "IBM Plex Mono",monospace;text-transform:uppercase}.mock-logo{font:800 .92rem "Public Sans",sans-serif;letter-spacing:-.03em}.mock-links{display:flex;gap:14px}.tk-hero{min-height:235px;display:grid;grid-template-columns:1.12fr .88fr;background:#17382f;color:#f9f2df}.tk-copy{padding:28px 20px}.tk-copy small,.pet-copy small{font:600 .52rem "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em}.tk-copy h4,.pet-copy h4{font:800 clamp(1.7rem,3.4vw,3.35rem)/.94 "Public Sans",sans-serif;letter-spacing:-.055em;margin:10px 0}.mock-btn{display:inline-block;margin-top:10px;padding:9px 12px;background:#ee6c4d;color:#111;font:600 .52rem "IBM Plex Mono",monospace;text-transform:uppercase;border:1.5px solid #111;box-shadow:2px 2px 0 #111}.living-art{position:relative;background:#d3b586;overflow:hidden}.living-art:before{content:"";position:absolute;left:10%;right:10%;bottom:18%;height:38%;background:#e97050;border:2px solid #111;border-radius:7px 7px 2px 2px;box-shadow:inset 0 -15px rgba(0,0,0,.08)}.living-art:after{content:"";position:absolute;width:45%;height:35%;left:28%;top:17%;background:#d8e2cd;border:7px solid #9a6a3f;box-shadow:0 0 0 2px #111}.sofa-leg{position:absolute;width:8px;height:28px;background:#111;bottom:11%;left:20%;box-shadow:170px 0 #111}.tk-cats{padding:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.mini-cat{border:1.5px solid #111;min-height:68px;padding:9px;background:#fff;font:600 .5rem "IBM Plex Mono",monospace;text-transform:uppercase;display:flex;flex-direction:column;justify-content:space-between}.mini-cat b{font:800 1.25rem "Public Sans",sans-serif;color:#17382f}.pet-home{background:#fff8ec}.pet-hero{min-height:260px;display:grid;grid-template-columns:1fr 1fr;background:#ff6b4a}.pet-copy{padding:30px 20px;position:relative;z-index:2}.pet-copy h4{max-width:9ch}.pet-copy p{font:600 .65rem/1.45 "Public Sans",sans-serif;max-width:30ch}.pet-art{position:relative;background:#f5ca4b;overflow:hidden}.pet-face{position:absolute;width:170px;height:170px;left:50%;top:53%;transform:translate(-50%,-50%);background:#fff1dc;border:3px solid #111;border-radius:48% 48% 42% 42%}.pet-face:before,.pet-face:after{content:"";position:absolute;width:58px;height:68px;background:#c98652;border:3px solid #111;top:-28px;z-index:-1}.pet-face:before{left:3px;transform:rotate(-22deg);border-radius:70% 20% 30% 20%}.pet-face:after{right:3px;transform:rotate(22deg);border-radius:20% 70% 20% 30%}.pet-eye{position:absolute;width:13px;height:18px;border-radius:50%;background:#111;top:65px;left:42px;box-shadow:68px 0 #111}.pet-nose{position:absolute;width:22px;height:14px;border-radius:50%;background:#111;top:94px;left:71px}.pet-badge{position:absolute;right:8%;top:9%;width:76px;height:76px;border:2px solid #111;border-radius:50%;background:#a9d8bd;display:grid;place-items:center;text-align:center;font:600 .48rem/1.2 "IBM Plex Mono",monospace;text-transform:uppercase;animation:spin 12s linear infinite}.pet-cats{padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.pet-cats .mini-cat:nth-child(1){background:#a9d8bd}.pet-cats .mini-cat:nth-child(2){background:#f5ca4b}.pet-cats .mini-cat:nth-child(3){background:#ef9cc0}.structure-flow{position:absolute;left:-12%;right:-12%;bottom:22px;transform:rotate(-4deg);background:#111;color:#fff;padding:9px 0;border-block:2px solid #111;overflow:hidden;white-space:nowrap;font:600 .58rem "IBM Plex Mono",monospace;text-transform:uppercase}.structure-flow span{display:inline-block;animation:mini-marquee 15s linear infinite}.structure-flow b{color:var(--yellow);padding:0 14px}@keyframes mini-marquee{to{transform:translateX(-50%)}}
+
     .lab{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.chooser{position:sticky;top:28px}.chooser p{font-size:1.18rem;line-height:1.5;max-width:520px;font-weight:600}.pills{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.pill{border:2px solid var(--line);background:transparent;border-radius:100px;padding:11px 16px;cursor:pointer;font:600 .78rem "IBM Plex Mono",monospace;text-transform:uppercase}.pill:hover,.pill.active{background:var(--ink);color:var(--paper)}.lab-output{border:2px solid #111;background:var(--red);color:#111;padding:24px;box-shadow:var(--shadow);min-height:360px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(1deg)}.lab-output .browser{border:2px solid #111;background:#f8f3e6}.browser-top{display:flex;gap:7px;padding:10px;border-bottom:2px solid #111}.browser-top i{width:10px;height:10px;border:2px solid #111;border-radius:50%;background:var(--yellow)}.browser-top i:nth-child(2){background:var(--pink)}.browser-top i:nth-child(3){background:var(--blue)}.browser-body{padding:22px;min-height:190px;display:grid;align-content:center}.browser-body small{font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase}.browser-body strong{font:400 clamp(2.4rem,5vw,5rem)/.9 "Archivo Black",sans-serif;text-transform:uppercase;margin-top:14px}.output-note{font:600 .75rem "IBM Plex Mono",monospace;text-transform:uppercase;margin-top:26px}
+
+    .testimonials-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:2px solid var(--line)}.testimonial{grid-column:span 2;min-height:330px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:var(--panel);position:relative}.testimonial+ .testimonial{border-left:2px solid var(--line)}.testimonial:nth-child(1),.testimonial:nth-child(2){grid-column:span 3;min-height:370px}.testimonial:nth-child(1){background:var(--red);color:#111}.testimonial:nth-child(2){background:var(--yellow);color:#111}.testimonial:nth-child(4){background:var(--blue);color:#111}.testimonial:nth-child(4){border-left:2px solid var(--line)}.testimonial:nth-child(n+3){border-top:2px solid var(--line)}.quote-mark{font:400 5rem/.55 "Archivo Black",sans-serif;opacity:.24}.quote{font-size:clamp(1.08rem,1.65vw,1.42rem);line-height:1.45;font-weight:700;margin:26px 0 34px}.testimonial:nth-child(-n+2) .quote{font-size:clamp(1.22rem,2vw,1.65rem)}.client{display:flex;justify-content:space-between;align-items:end;gap:18px;border-top:2px solid currentColor;padding-top:16px}.client strong{display:block;font:600 .82rem "IBM Plex Mono",monospace;text-transform:uppercase}.client span{display:block;font:500 .7rem/1.45 "IBM Plex Mono",monospace;text-transform:uppercase;margin-top:5px}.service-label{max-width:150px;text-align:right;font:600 .66rem/1.4 "IBM Plex Mono",monospace;text-transform:uppercase;opacity:.72}
 
     .manifesto{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end}.manifesto h2{max-width:700px}.principles{list-style:none;padding:0;margin:0;border-top:2px solid var(--line)}.principles li{display:grid;grid-template-columns:42px 1fr;gap:16px;padding:20px 0;border-bottom:2px solid var(--line);font-weight:700;font-size:1.05rem}.principles span{font:600 .75rem "IBM Plex Mono",monospace;color:var(--red)}
 
-    .cta{padding:110px 0 80px;text-align:center}.cta .mini{font:600 .78rem "IBM Plex Mono",monospace;text-transform:uppercase}.cta h2{margin:20px auto 36px;max-width:1000px}.cta-link{display:inline-flex;align-items:center;gap:18px;background:var(--yellow);color:#111;border:2px solid #111;padding:17px 22px;text-decoration:none;font:600 .84rem "IBM Plex Mono",monospace;text-transform:uppercase;box-shadow:5px 5px 0 #111;transition:transform .2s}.cta-link:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 #111}.cta-link b{font-size:1.4rem}
+    .cta{padding:110px 0 80px;text-align:center}.cta .mini{font:600 .78rem "IBM Plex Mono",monospace;text-transform:uppercase}.cta h2{font:400 clamp(2.7rem,5.5vw,6rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:20px auto 36px;max-width:1000px}.cta-link{display:inline-flex;align-items:center;gap:18px;background:var(--yellow);color:#111;border:2px solid #111;padding:17px 22px;text-decoration:none;font:600 .84rem "IBM Plex Mono",monospace;text-transform:uppercase;box-shadow:5px 5px 0 #111;transition:transform .2s}.cta-link:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 #111}.cta-link b{font-size:1.4rem}
+    .contact{padding:100px 0}.contact-grid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(420px,1.22fr);gap:52px;align-items:start}.contact-intro{position:sticky;top:28px}.contact-intro h2{font:400 clamp(2.7rem,5.5vw,6rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:18px 0 28px;max-width:620px}.contact-intro p{font-size:1.08rem;line-height:1.55;font-weight:600;max-width:43ch;margin:0 0 28px}.contact-email{display:inline-block;font:400 clamp(1.45rem,3vw,3.1rem)/1 "Archivo Black",sans-serif;letter-spacing:-.045em;text-decoration-thickness:3px;text-underline-offset:7px;overflow-wrap:anywhere}.contact-email:hover{color:var(--red)}.contact-donut{width:132px;height:132px;margin:48px 0 0 20px;border:28px solid var(--red);border-radius:50%;box-shadow:0 0 0 3px #111,9px 10px 0 rgba(18,17,14,.18);position:relative;transform:rotate(-10deg)}.contact-donut:before,.contact-donut:after{content:"";position:absolute;width:22px;height:5px;background:#111;border-radius:10px;top:-16px;left:12px;transform:rotate(32deg);box-shadow:39px 7px 0 var(--yellow),12px 70px 0 var(--blue)}.contact-donut:after{top:69px;left:41px;transform:rotate(-28deg);box-shadow:none;background:var(--pink)}
+    .contact-form{border:2px solid var(--line);background:var(--panel);box-shadow:var(--shadow);padding:30px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:grid;gap:8px;margin-bottom:18px}.field label{font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;border:2px solid var(--line);border-radius:0;background:var(--paper);color:var(--ink);padding:13px 14px;font:600 1rem/1.35 "Public Sans",sans-serif;outline:none}.field textarea{min-height:148px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--red);box-shadow:3px 3px 0 var(--red)}.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:.78}.required{color:var(--red)}.form-submit{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;border:2px solid #111;padding:15px 17px;background:var(--yellow);color:#111;box-shadow:4px 4px 0 #111;cursor:pointer;font:600 .8rem "IBM Plex Mono",monospace;text-transform:uppercase;transition:transform .2s}.form-submit:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 #111}.form-submit:disabled{cursor:wait;opacity:.7}.form-status{display:none;margin:18px 0 0;border:2px solid var(--line);padding:12px 14px;font:600 .76rem/1.5 "IBM Plex Mono",monospace}.form-status.show{display:block}.form-status.success{background:var(--blue);color:#111;border-color:#111}.form-status.error{background:var(--pink);color:#111;border-color:#111}.bot-field{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(1px,1px,1px,1px)!important;white-space:nowrap!important}
     footer{border-top:2px solid var(--line);display:flex;justify-content:space-between;gap:30px;padding:24px 0 38px;font:500 .75rem "IBM Plex Mono",monospace;text-transform:uppercase}.footer-name{font-weight:600}
 
     @media (max-width:900px){
-      .hero{grid-template-columns:1fr;padding-top:48px}.hero-art{min-height:430px}.section-head{grid-template-columns:1fr;gap:14px}.services{grid-template-columns:1fr}.service{min-height:280px}.service+.service{border-left:0;border-top:2px solid var(--line)}.lab,.manifesto{grid-template-columns:1fr}.chooser{position:static}.manifesto{gap:40px}
+      .hero{grid-template-columns:1fr;padding-top:48px}.hero-art{min-height:430px}.section-head{grid-template-columns:1fr;gap:14px}.services{grid-template-columns:1fr}.service{min-height:280px}.service+.service{border-left:0;border-top:2px solid var(--line)}.project-layout{grid-template-columns:1fr}.project-copy{border-right:0;border-bottom:2px solid var(--line)}.project-visual{min-height:560px}.project-card.pet .project-visual{order:0}.lab,.manifesto{grid-template-columns:1fr}.chooser{position:static}.testimonials-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.testimonial,.testimonial:nth-child(1),.testimonial:nth-child(2){grid-column:span 1;min-height:330px}.testimonial:nth-child(n){border-left:0;border-top:2px solid var(--line)}.testimonial:nth-child(1),.testimonial:nth-child(2){border-top:0}.testimonial:nth-child(even){border-left:2px solid var(--line)}.manifesto{gap:40px}.contact-grid{grid-template-columns:1fr}.contact-intro{position:static}.contact-donut{position:absolute;right:8%;margin-top:-70px;opacity:.88;transform:rotate(-10deg) scale(.72)}
     }
     @media (max-width:560px){
-      .nav{width:calc(100% - 24px)}main{width:calc(100% - 24px)}.nav-links a:not(:first-child){display:none}.nav{font-size:.69rem}.hero{min-height:auto;padding:42px 0 28px;gap:8px}.stamp{margin-bottom:22px;font-size:.67rem}h1{font-size:clamp(3rem,18vw,5rem);line-height:.86}.outline{-webkit-text-stroke:1.5px var(--ink)}.hero-sub{grid-template-columns:1fr auto;margin-top:26px}.hero-sub p{font-size:1rem}.arrow-link{width:55px;height:55px}.hero-art{min-height:370px}.orbit{width:310px;height:310px}.donut-wrap{width:245px;height:245px}.tag-a{right:0}.tag-b{left:0}.cursor-dot{width:48px;height:48px}.section{padding:72px 0}.services .service{padding:22px}.section h2{font-size:clamp(2.5rem,13vw,4rem)}.section-head{margin-bottom:34px}.lab-output{min-height:320px;padding:16px}.browser-body{padding:18px}.manifesto{gap:34px}.cta{padding:80px 0 62px}.cta-link{width:100%;justify-content:center}footer{flex-direction:column;padding-bottom:28px}.ticker-track span{font-size:.7rem}
+      .nav{width:calc(100% - 24px)}main{width:calc(100% - 24px)}.nav-links{gap:12px}.nav-links a:not(:first-child):not(:last-child){display:none}.nav{font-size:.69rem}.hero{min-height:auto;padding:42px 0 28px;gap:8px}.stamp{margin-bottom:22px;font-size:.67rem}h1{font-size:clamp(3rem,18vw,5rem);line-height:.86}.outline{-webkit-text-stroke:1.5px var(--ink)}.hero-sub{grid-template-columns:1fr auto;margin-top:26px}.hero-sub p{font-size:1rem}.arrow-link{width:55px;height:55px}.hero-art{min-height:370px}.orbit{width:310px;height:310px}.donut-wrap{width:245px;height:245px}.tag-a{right:0}.tag-b{left:0}.cursor-dot{width:48px;height:48px}.section{padding:72px 0}.services .service{padding:22px}.section h2{font-size:clamp(2.5rem,13vw,4rem)}.section-head{margin-bottom:34px}.projects{gap:26px}.project-card{box-shadow:4px 4px 0 var(--ink)}.project-bar{align-items:flex-start;flex-direction:column;gap:4px}.project-copy{padding:24px}.project-copy h3{font-size:clamp(2.5rem,14vw,4rem)}.project-visual{min-height:440px;padding:18px}.case-browser{width:100%;box-shadow:8px 9px 0 rgba(17,17,17,.22)}.site-canvas{min-height:350px}.mock-links{display:none}.tk-hero,.pet-hero{min-height:210px}.tk-copy,.pet-copy{padding:20px 14px}.tk-copy h4,.pet-copy h4{font-size:1.65rem}.tk-cats{grid-template-columns:repeat(2,1fr);padding:12px}.tk-cats .mini-cat:nth-child(n+3){display:none}.pet-cats{padding:12px}.pet-face{width:120px;height:120px}.pet-eye{top:45px;left:28px;box-shadow:50px 0 #111}.pet-nose{top:68px;left:48px}.pet-badge{width:58px;height:58px;right:2%}.structure-flow{bottom:12px}.lab-output{min-height:320px;padding:16px}.browser-body{padding:18px}.testimonials-grid{grid-template-columns:1fr}.testimonial,.testimonial:nth-child(1),.testimonial:nth-child(2){grid-column:1;min-height:0;padding:22px;border-left:0}.testimonial:nth-child(n){border-left:0;border-top:2px solid var(--line)}.testimonial:first-child{border-top:0}.quote{margin:22px 0 30px}.client{align-items:start;flex-direction:column}.service-label{max-width:none;text-align:left}.manifesto{gap:34px}.cta{padding:80px 0 62px}.cta-link{width:100%;justify-content:center}.contact{padding:72px 0}.contact-grid{gap:34px}.contact-donut{display:none}.contact-form{padding:20px;box-shadow:4px 4px 0 var(--ink)}.form-row{grid-template-columns:1fr;gap:0}.contact-email{font-size:clamp(1.4rem,7vw,2.15rem)}footer{flex-direction:column;padding-bottom:28px}.ticker-track span{font-size:.7rem}
     }
-    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.orbit,.donut-wrap,.ticker-track,.cursor-dot,.status i{animation:none}}
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.orbit,.donut-wrap,.ticker-track,.cursor-dot,.status i,.pet-badge,.structure-flow span{animation:none}.project-card:hover .case-browser{transform:none}}
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <nav class="nav" aria-label="Primary navigation">
-    <div class="nav-links"><a href="#work">What we do</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div>
+    <div class="nav-links"><a href="#projects">Selected work</a><a href="#work">What we do</a><a href="#approach">Approach</a><a href="#testimonials">Client stories</a><a href="#contact">Contact</a></div>
     <div class="status"><i aria-hidden="true"></i>Taking on 2 new projects</div>
   </nav>
 
@@ -132,8 +138,93 @@
       </div>
     </section>
 
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-head"><div class="index">02 / Selected work</div><h2 id="projects-title">Two storefronts. Two completely different worlds.</h2></div>
+      <div class="projects">
+        <article class="project-card">
+          <div class="project-bar"><span>01 / Rental commerce</span><span>Website design + build</span></div>
+          <div class="project-layout">
+            <div class="project-copy">
+              <div>
+                <div class="project-kicker">Turnkey Living</div>
+                <h3>Home, without the heavy lifting.</h3>
+                <p>A calm, premium rental storefront that turns a complex proposition into a simple journey: browse, choose your tenure, verify and get it delivered.</p>
+                <ol class="structure-list">
+                  <li><span>01</span>Value-first hero + pin-code delivery check</li>
+                  <li><span>02</span>Shop-by-category browsing</li>
+                  <li><span>03</span>Build-your-own combo offer</li>
+                  <li><span>04</span>Offers + most-rented products</li>
+                  <li><span>05</span>Why rent + nine proof points</li>
+                  <li><span>06</span>Customer reviews + three-step process</li>
+                </ol>
+              </div>
+              <a class="site-link" href="https://turnkeyliving.in/" target="_blank" rel="noopener noreferrer"><span>Visit live website</span><span>↗</span></a>
+            </div>
+            <div class="project-visual" aria-label="Graphic preview of the Turnkey Living homepage structure">
+              <div class="case-browser">
+                <div class="case-top"><i></i><i></i><i></i><span class="case-url">turnkeyliving.in</span></div>
+                <div class="site-canvas tk-home">
+                  <div class="mock-nav"><span class="mock-logo">Turnkey Living</span><span class="mock-links"><span>Appliances</span><span>Furniture</span><span>How it works</span></span></div>
+                  <div class="tk-hero">
+                    <div class="tk-copy"><small>Furniture & appliances, on rent</small><h4>Own experiences. Rent everything else.</h4><span class="mock-btn">Browse collection →</span></div>
+                    <div class="living-art"><span class="sofa-leg"></span></div>
+                  </div>
+                  <div class="tk-cats">
+                    <div class="mini-cat"><b>01</b><span>Appliances</span></div>
+                    <div class="mini-cat"><b>02</b><span>Furniture</span></div>
+                    <div class="mini-cat"><b>03</b><span>Combos</span></div>
+                    <div class="mini-cat"><b>04</b><span>Popular now</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="structure-flow" aria-hidden="true"><span>Hero <b>→</b> Delivery check <b>→</b> Categories <b>→</b> Combo builder <b>→</b> Offers <b>→</b> Popular picks <b>→</b> Why rent <b>→</b> Reviews <b>→</b> How it works <b>→</b> Hero <b>→</b> Delivery check <b>→</b> Categories <b>→</b> Combo builder <b>→</b> Offers <b>→</b> Popular picks <b>→</b> Why rent <b>→</b> Reviews <b>→</b> How it works <b>→</b></span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card pet">
+          <div class="project-bar"><span>02 / Pet commerce</span><span>Website design + build</span></div>
+          <div class="project-layout">
+            <div class="project-copy">
+              <div>
+                <div class="project-kicker">HygienicPet</div>
+                <h3>Pet essentials, at walkies speed.</h3>
+                <p>A bright, fast-moving storefront built around one promise: trusted pet-care products delivered quickly, with the categories people need easy to reach.</p>
+                <ol class="structure-list">
+                  <li><span>01</span>Motion hero + 20-minute promise</li>
+                  <li><span>02</span>Delivery, vet-approval + fee proof</li>
+                  <li><span>03</span>Eight easy-to-scan care categories</li>
+                  <li><span>04</span>Best sellers + fresh arrivals</li>
+                  <li><span>05</span>Direct paths into product collections</li>
+                </ol>
+              </div>
+              <a class="site-link" href="https://hygienicpet.com/" target="_blank" rel="noopener noreferrer"><span>Visit live website</span><span>↗</span></a>
+            </div>
+            <div class="project-visual" aria-label="Graphic preview of the HygienicPet homepage structure">
+              <div class="case-browser">
+                <div class="case-top"><i></i><i></i><i></i><span class="case-url">hygienicpet.com</span></div>
+                <div class="site-canvas pet-home">
+                  <div class="mock-nav"><span class="mock-logo">HygienicPet</span><span class="mock-links"><span>Shop</span><span>Best sellers</span><span>Care</span></span></div>
+                  <div class="pet-hero">
+                    <div class="pet-copy"><small>Delivered in as fast as 20 minutes</small><h4>Care at your doorstep.</h4><p>Food, litter, meds and treats from a store near you.</p><span class="mock-btn">Shop essentials →</span></div>
+                    <div class="pet-art"><div class="pet-face"><i class="pet-eye"></i><i class="pet-nose"></i></div><div class="pet-badge">20 min<br>delivery</div></div>
+                  </div>
+                  <div class="pet-cats">
+                    <div class="mini-cat"><b>Food</b><span>Everyday essentials</span></div>
+                    <div class="mini-cat"><b>Play</b><span>Toys & enrichment</span></div>
+                    <div class="mini-cat"><b>Care</b><span>Health & grooming</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="structure-flow" aria-hidden="true"><span>Speed promise <b>→</b> Trust strip <b>→</b> Categories <b>→</b> Best sellers <b>→</b> Fresh in <b>→</b> Speed promise <b>→</b> Trust strip <b>→</b> Categories <b>→</b> Best sellers <b>→</b> Fresh in <b>→</b></span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="approach">
-      <div class="section-head"><div class="index">02 / The idea lab</div><h2>Pick the problem. Watch the plan take shape.</h2></div>
+      <div class="section-head"><div class="index">03 / The idea lab</div><h2>Pick the problem. Watch the plan take shape.</h2></div>
       <div class="lab">
         <div class="chooser">
           <p>Most agencies start with a service list. We start with the thing keeping your business stuck.</p>
@@ -154,8 +245,34 @@
       </div>
     </section>
 
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="section-head"><div class="index">04 / Client stories</div><h2 id="testimonials-title">Good work. Straight from the people who hired us.</h2></div>
+      <div class="testimonials-grid">
+        <article class="testimonial">
+          <div><div class="quote-mark" aria-hidden="true">“</div><p class="quote">Yash is the guy who knows what he’s doing. The work has always been amazing, on time and dependable. After 10 years working together, he still brings the same enthusiasm to every project.</p></div>
+          <div class="client"><div><strong>Tony</strong><span>California</span></div><div class="service-label">Facebook · Instagram · YouTube</div></div>
+        </article>
+        <article class="testimonial">
+          <div><div class="quote-mark" aria-hidden="true">“</div><p class="quote">Outstanding work. Yash completely transformed what my restaurant website could look like. The first reveal was astonishing, the responsive site felt current, and he delivered right on time. I would definitely recommend him to friends and family.</p></div>
+          <div class="client"><div><strong>Scott</strong><span>Restaurant owner · Los Angeles</span></div><div class="service-label">Website redesign</div></div>
+        </article>
+        <article class="testimonial">
+          <div><div class="quote-mark" aria-hidden="true">“</div><p class="quote">The Deploy & Donuts team did great work. The website looks cool, our Google Business Profile is properly optimized, and phone calls improved by up to 90% after the second month of SEO.</p></div>
+          <div class="client"><div><strong>Vincent</strong><span>West Hollywood</span></div><div class="service-label">Website · SEO · Google Business Profile</div></div>
+        </article>
+        <article class="testimonial">
+          <div><div class="quote-mark" aria-hidden="true">“</div><p class="quote">Amazing work quality and on-time delivery. I’m fully satisfied with the new restaurant website, and the SEO started bringing results from the very first month. Great work.</p></div>
+          <div class="client"><div><strong>Daniel</strong><span>Restaurant owner · California</span></div><div class="service-label">Website · SEO</div></div>
+        </article>
+        <article class="testimonial">
+          <div><div class="quote-mark" aria-hidden="true">“</div><p class="quote">I’m really impressed with the pet store website. SEO is progressing well, and the ad campaigns have already started bringing in sales. Quality work across the board.</p></div>
+          <div class="client"><div><strong>Nik</strong><span>Pet store owner · India</span></div><div class="service-label">Website · SEO · Ads · Social</div></div>
+        </article>
+      </div>
+    </section>
+
     <section class="section manifesto">
-      <div><div class="index">03 / House rules</div><h2>Less agency theatre. More work that works.</h2></div>
+      <div><div class="index">05 / House rules</div><h2>Less agency theatre. More work that works.</h2></div>
       <ol class="principles">
         <li><span>01</span>Plain-English strategy. No jargon fog.</li>
         <li><span>02</span>Fast decisions. Fewer meetings.</li>
@@ -164,20 +281,86 @@
       </ol>
     </section>
 
-    <section class="cta" id="contact">
+    <section class="cta">
       <div class="mini">Have a business worth noticing?</div>
       <h2>Let’s make the internet care.</h2>
       <a class="cta-link" href="#work"><span>See how we make noise</span><b>↑</b></a>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div class="contact-intro">
+          <div class="index">06 / Start a project</div>
+          <h2 id="contact-title">Tell us what you’re building.</h2>
+          <p>Tell us about your project. We reply within one business day.</p>
+          <a class="contact-email" href="mailto:hello@deployanddonuts.com">hello@deployanddonuts.com</a>
+          <div class="contact-donut" aria-hidden="true"></div>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="contact-name">Name <span class="required" aria-hidden="true">*</span></label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="contact-email-field">Email <span class="required" aria-hidden="true">*</span></label>
+              <input id="contact-email-field" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="business-name">Business name <span class="required" aria-hidden="true">*</span></label>
+              <input id="business-name" name="business_name" type="text" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="website">Website <span aria-hidden="true">(optional)</span></label>
+              <input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://">
+            </div>
+          </div>
+          <div class="field">
+            <label for="help-with">What do you need help with?</label>
+            <select id="help-with" name="service">
+              <option value="SEO">SEO</option>
+              <option value="Website Design">Website Design</option>
+              <option value="Google Ads">Google Ads</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Something else">Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required placeholder="A few details about your business, goals and timeline"></textarea>
+          </div>
+          <div class="bot-field" aria-hidden="true">
+            <label for="botcheck">Leave this field empty</label>
+            <input id="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="form-submit" type="submit"><span>Send project details</span><span aria-hidden="true">↗</span></button>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
     </section>
 
     <footer><div class="footer-name">Deploy & Donuts</div><div>Built with caffeine, curiosity & clean code.</div><div>© 2026</div></footer>
   </main>
 
   <script>
+    const WEB3FORMS_ACCESS_KEY = "PASTE-YOUR-WEB3FORMS-KEY-HERE";
+
     (function () {
       var buttons = document.querySelectorAll('.pill');
       var outcome = document.getElementById('outcome');
       var plan = document.getElementById('plan');
+      var contactForm = document.getElementById('contact-form');
+      var formStatus = document.getElementById('form-status');
+      var submitButton = contactForm.querySelector('.form-submit');
+      var submitLabel = submitButton.querySelector('span');
+
+      function showFormStatus(message, type) {
+        formStatus.textContent = message;
+        formStatus.className = 'form-status show ' + type;
+      }
+
       buttons.forEach(function (button) {
         button.addEventListener('click', function () {
           buttons.forEach(function (item) { item.classList.remove('active'); });
@@ -185,6 +368,55 @@
           outcome.textContent = button.getAttribute('data-copy');
           plan.textContent = button.getAttribute('data-note');
         });
+      });
+
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        formStatus.className = 'form-status';
+        formStatus.textContent = '';
+
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        if (document.getElementById('botcheck').checked) {
+          contactForm.reset();
+          showFormStatus("Thanks! We'll get back within one business day.", 'success');
+          return;
+        }
+
+        if (WEB3FORMS_ACCESS_KEY === 'PASTE-YOUR-WEB3FORMS-KEY-HERE') {
+          showFormStatus('The contact form is being connected. For now, please email hello@deployanddonuts.com.', 'error');
+          return;
+        }
+
+        var formData = new FormData(contactForm);
+        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+        formData.append('subject', 'New Deploy & Donuts project inquiry');
+        formData.append('from_name', 'Deploy & Donuts website');
+        submitButton.disabled = true;
+        submitLabel.textContent = 'Sending...';
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+          .then(function (response) { return response.json(); })
+          .then(function (data) {
+            if (!data.success) {
+              throw new Error('Submission failed');
+            }
+            contactForm.reset();
+            showFormStatus("Thanks! We'll get back within one business day.", 'success');
+          })
+          .catch(function () {
+            showFormStatus('Something went wrong. Please try again or email hello@deployanddonuts.com.', 'error');
+          })
+          .finally(function () {
+            submitButton.disabled = false;
+            submitLabel.textContent = 'Send project details';
+          });
       });
     }());
   </script>
