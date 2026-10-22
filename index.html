@@ -75,6 +75,21 @@
 
     .testimonials-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:2px solid var(--line)}.testimonial{grid-column:span 2;min-height:330px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:var(--panel);position:relative}.testimonial+ .testimonial{border-left:2px solid var(--line)}.testimonial:nth-child(1),.testimonial:nth-child(2){grid-column:span 3;min-height:370px}.testimonial:nth-child(1){background:var(--red);color:#111}.testimonial:nth-child(2){background:var(--yellow);color:#111}.testimonial:nth-child(4){background:var(--blue);color:#111}.testimonial:nth-child(4){border-left:2px solid var(--line)}.testimonial:nth-child(n+3){border-top:2px solid var(--line)}.quote-mark{font:400 5rem/.55 "Archivo Black",sans-serif;opacity:.24}.quote{font-size:clamp(1.08rem,1.65vw,1.42rem);line-height:1.45;font-weight:700;margin:26px 0 34px}.testimonial:nth-child(-n+2) .quote{font-size:clamp(1.22rem,2vw,1.65rem)}.client{display:flex;justify-content:space-between;align-items:end;gap:18px;border-top:2px solid currentColor;padding-top:16px}.client strong{display:block;font:600 .82rem "IBM Plex Mono",monospace;text-transform:uppercase}.client span{display:block;font:500 .7rem/1.45 "IBM Plex Mono",monospace;text-transform:uppercase;margin-top:5px}.service-label{max-width:150px;text-align:right;font:600 .66rem/1.4 "IBM Plex Mono",monospace;text-transform:uppercase;opacity:.72}
 
+    .founder-grid{display:grid;grid-template-columns:minmax(320px,.8fr) minmax(0,1.2fr);gap:52px;align-items:start}
+    .founder-photo{border:2px solid var(--line);background:var(--panel);box-shadow:var(--shadow);transform:rotate(-1.2deg)}
+    .founder-img{display:block;width:100%;height:auto}
+    .founder-copy p{font-size:1.12rem;line-height:1.6;font-weight:600;margin:0 0 22px;max-width:56ch}
+    .founder-label{font:600 .75rem "IBM Plex Mono",monospace;text-transform:uppercase;color:var(--red);margin:32px 0 4px}
+    .founder-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .founder-tags .pill{cursor:default}
+    .founder-stats{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--line);margin-top:36px;background:var(--panel)}
+    .founder-stat{padding:20px}
+    .founder-stat+.founder-stat{border-left:2px solid var(--line)}
+    .founder-stat b{display:block;font:400 clamp(1.9rem,3vw,2.8rem)/1 "Archivo Black",sans-serif;margin-bottom:8px}
+    .founder-stat span{font:600 .68rem/1.5 "IBM Plex Mono",monospace;text-transform:uppercase;color:var(--muted)}
+    @media (max-width:900px){.founder-grid{grid-template-columns:1fr}.founder-photo{max-width:520px}}
+    @media (max-width:560px){.founder-stats{grid-template-columns:1fr}.founder-stat+.founder-stat{border-left:0;border-top:2px solid var(--line)}}
+
     .manifesto{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end}.manifesto h2{max-width:700px}.principles{list-style:none;padding:0;margin:0;border-top:2px solid var(--line)}.principles li{display:grid;grid-template-columns:42px 1fr;gap:16px;padding:20px 0;border-bottom:2px solid var(--line);font-weight:700;font-size:1.05rem}.principles span{font:600 .75rem "IBM Plex Mono",monospace;color:var(--red)}
 
     .cta{padding:110px 0 80px;text-align:center}.cta .mini{font:600 .78rem "IBM Plex Mono",monospace;text-transform:uppercase}.cta h2{font:400 clamp(2.7rem,5.5vw,6rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:20px auto 36px;max-width:1000px}.cta-link{display:inline-flex;align-items:center;gap:18px;background:var(--yellow);color:#111;border:2px solid #111;padding:17px 22px;text-decoration:none;font:600 .84rem "IBM Plex Mono",monospace;text-transform:uppercase;box-shadow:5px 5px 0 #111;transition:transform .2s}.cta-link:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 #111}.cta-link b{font-size:1.4rem}
@@ -95,7 +110,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <nav class="nav" aria-label="Primary navigation">
-    <div class="nav-links"><a href="#projects">Selected work</a><a href="#work">What we do</a><a href="#approach">Approach</a><a href="#testimonials">Client stories</a><a href="#contact">Contact</a></div>
+    <div class="nav-links"><a href="#projects">Selected work</a><a href="#work">What we do</a><a href="#approach">Approach</a><a href="#testimonials">Client stories</a><a href="#founder">Founder</a><a href="#contact">Contact</a></div>
     <div class="status"><i aria-hidden="true"></i>Taking on 2 new projects</div>
   </nav>
 
@@ -271,8 +286,44 @@
       </div>
     </section>
 
+    <section class="section" id="founder" aria-labelledby="founder-title">
+      <div class="section-head"><div class="index">05 / Meet the founder</div><h2 id="founder-title">Hire the studio. Get the founder.</h2></div>
+      <div class="founder-grid">
+        <div class="founder-photo">
+          <div class="project-bar"><span>Yash Dalmia · Founder</span><span>Deploy &amp; Donuts</span></div>
+          <img class="founder-img" src="founder.jpg" alt="Yash Dalmia, founder of Deploy & Donuts" width="937" height="1250" loading="lazy">
+        </div>
+        <div class="founder-copy">
+          <p>I&rsquo;m Yash Dalmia, a digital marketer and web designer with <strong>10 years in the game</strong>. I started Deploy &amp; Donuts for one simple reason: local businesses were paying agencies for glossy reports nobody read and websites nobody called from. Here, the person who plans your growth is the same person who builds it.</p>
+          <p>My strongest work sits where search meets sales. Local SEO and Google Business Profiles that land you in the top 3 on Maps, websites built to turn visitors into phone calls, and ads that only spend where it counts. One client saw <strong>90% more phone calls</strong> after a full overhaul. His words are in the stories above, not mine.</p>
+          <div class="founder-label">Strongest at</div>
+          <ul class="structure-list">
+            <li><span>01</span>Local SEO &amp; Google Business Profile</li>
+            <li><span>02</span>SEO &amp; content that ranks</li>
+            <li><span>03</span>Website design &amp; builds</li>
+            <li><span>04</span>Google Ads</li>
+            <li><span>05</span>Social media management</li>
+          </ul>
+          <div class="founder-label">Who I&rsquo;ve helped</div>
+          <div class="founder-tags">
+            <span class="pill">Restaurants &amp; cafes</span>
+            <span class="pill">Dental practices</span>
+            <span class="pill">Med spas</span>
+            <span class="pill">Home services</span>
+            <span class="pill">Attorneys</span>
+            <span class="pill">Retail &amp; pet brands</span>
+          </div>
+          <div class="founder-stats">
+            <div class="founder-stat"><b>10+</b><span>Years of experience</span></div>
+            <div class="founder-stat"><b>90%</b><span>More calls for one client</span></div>
+            <div class="founder-stat"><b>1</b><span>Person you deal with: me</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section manifesto">
-      <div><div class="index">05 / House rules</div><h2>Less agency theatre. More work that works.</h2></div>
+      <div><div class="index">06 / House rules</div><h2>Less agency theatre. More work that works.</h2></div>
       <ol class="principles">
         <li><span>01</span>Plain-English strategy. No jargon fog.</li>
         <li><span>02</span>Fast decisions. Fewer meetings.</li>
@@ -290,7 +341,7 @@
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-grid">
         <div class="contact-intro">
-          <div class="index">06 / Start a project</div>
+          <div class="index">07 / Start a project</div>
           <h2 id="contact-title">Tell us what you’re building.</h2>
           <p>Tell us about your project. We reply within one business day.</p>
           <a class="contact-email" href="mailto:info@deployanddonuts.com">info@deployanddonuts.com</a>
