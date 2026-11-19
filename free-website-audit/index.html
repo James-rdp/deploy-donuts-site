@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N76JFQS8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW2LV9BV7L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NW2LV9BV7L');
+  </script>
+  <!-- End Google tag (gtag.js) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Free Website Audit | Deploy &amp; Donuts</title>
+  <meta name="description" content="Get a free website audit, checked by hand by the founder of Deploy & Donuts. Broken pages, titles, descriptions, images, speed and mobile, walked through on a 15-minute call." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper:#f5f2e8;
+      --ink:#12110e;
+      --red:#ff4d2e;
+      --yellow:#f6d83d;
+      --blue:#45c7e8;
+      --pink:#ff96b5;
+      --muted:#5e5b53;
+      --line:#191713;
+      --panel:#fffdf5;
+      --shadow:6px 6px 0 var(--ink);
+      --max:1240px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper:#11110f;
+        --ink:#f8f3e6;
+        --muted:#c2bdb0;
+        --line:#f8f3e6;
+        --panel:#1b1a17;
+        --shadow:6px 6px 0 #000;
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",sans-serif;overflow-x:hidden}
+    a{color:inherit}
+    button{font:inherit;color:inherit}
+    ::selection{background:var(--yellow);color:#111}
+    .noise{position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+    .skip{position:absolute;left:10px;top:10px;background:var(--ink);color:var(--paper);padding:10px;z-index:30;transform:translateY(-200%)}.skip:focus{transform:translateY(0)}
+    .nav{width:min(var(--max),calc(100% - 40px));margin:auto;padding:20px 0 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+    .nav a{text-decoration:none}
+    .nav-links{display:flex;gap:20px;flex-wrap:wrap}
+    .nav-links a:hover{color:var(--red)}
+    .nav-brand{font-weight:600}
+    .status{display:flex;align-items:center;gap:8px}
+    .status i{width:9px;height:9px;border-radius:50%;background:var(--red);animation:pulse 1.8s infinite}
+    @keyframes pulse{50%{transform:scale(1.7);opacity:.55}}
+    main{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .lp-hero{padding:72px 0 56px;max-width:980px}
+    .stamp{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#111;border:2px solid #111;padding:9px 13px;font:600 .78rem "IBM Plex Mono",monospace;transform:rotate(-2deg);box-shadow:3px 3px 0 #111;margin-bottom:28px}
+    h1{font:400 clamp(2.9rem,6vw,5.6rem)/.92 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:0;max-width:920px}
+    .lp-sub{font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.55;font-weight:600;max-width:620px;margin:28px 0 0}
+    .lp-cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px}
+    .cta-link{display:inline-flex;align-items:center;gap:14px;background:var(--yellow);color:#111;border:2px solid #111;padding:16px 22px;text-decoration:none;font:600 .84rem "IBM Plex Mono",monospace;text-transform:uppercase;box-shadow:5px 5px 0 #111;transition:transform .2s}
+    .cta-link:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 #111}
+    .cta-ghost{background:var(--panel);color:var(--ink);border-color:var(--line);box-shadow:5px 5px 0 var(--ink)}
+    .trust-line{font:600 .78rem "IBM Plex Mono",monospace;text-transform:uppercase;color:var(--muted);margin-top:22px}
+    .section{padding:64px 0;border-top:2px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:160px 1fr;gap:32px;margin-bottom:40px}
+    .index{font:600 .8rem "IBM Plex Mono",monospace;text-transform:uppercase}
+    .section h2{font:400 clamp(2.2rem,4.5vw,4rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:0;max-width:900px}
+    .checks{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--line)}
+    .check{padding:26px;min-height:210px;background:var(--panel);border-left:2px solid var(--line)}
+    .check:first-child{border-left:0}
+    .check:nth-child(3n+1){border-left:0}
+    .check:nth-child(n+4){border-top:2px solid var(--line)}
+    .check:nth-child(2){background:var(--yellow);color:#111}
+    .check:nth-child(5){background:var(--blue);color:#111}
+    .check-num{font:600 .8rem "IBM Plex Mono",monospace}
+    .check h3{font:400 1.5rem/1.05 "Archivo Black",sans-serif;text-transform:uppercase;margin:18px 0 10px}
+    .check p{line-height:1.55;margin:0;font-weight:600;font-size:.98rem}
+    .note-strip{margin-top:28px;border:2px solid var(--line);background:var(--panel);box-shadow:var(--shadow);padding:22px 26px;font-weight:600;line-height:1.55}
+    .note-strip b{color:var(--red)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--line)}
+    .step{padding:28px;background:var(--panel);border-left:2px solid var(--line)}
+    .step:first-child{border-left:0}
+    .step:nth-child(2){background:var(--yellow);color:#111}
+    .step-num{font:400 3rem/.9 "Archivo Black",sans-serif}
+    .step h3{font:400 1.4rem/1.05 "Archivo Black",sans-serif;text-transform:uppercase;margin:16px 0 10px}
+    .step p{line-height:1.55;margin:0;font-weight:600}
+    .not-panel{border:2px solid var(--line);background:var(--red);color:#111;box-shadow:var(--shadow);padding:28px}
+    .not-panel h3{font:400 clamp(1.6rem,3vw,2.4rem)/1 "Archivo Black",sans-serif;text-transform:uppercase;margin:0 0 16px}
+    .not-panel ul{margin:0;padding-left:22px;font-weight:700;line-height:1.8}
+    .work-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .work-card{border:2px solid var(--line);background:var(--panel);box-shadow:var(--shadow);padding:28px}
+    .work-card:nth-child(2){background:var(--blue);color:#111}
+    .work-card .kicker{font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase;color:var(--red)}
+    .work-card:nth-child(2) .kicker{color:#111}
+    .work-card h3{font:400 clamp(1.8rem,3vw,2.6rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;margin:14px 0 12px}
+    .work-card p{line-height:1.55;font-weight:600;margin:0 0 20px}
+    .site-link{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;width:100%;border:2px solid var(--line);padding:14px 16px;text-decoration:none;font:600 .76rem "IBM Plex Mono",monospace;text-transform:uppercase;background:var(--ink);color:var(--paper)}
+    .site-link:hover{background:var(--red);color:#111;border-color:#111}
+    .proof{border:2px solid var(--line);background:var(--panel);box-shadow:var(--shadow);padding:32px;max-width:820px}
+    .quote-mark{font:400 4rem/.55 "Archivo Black",sans-serif;opacity:.24}
+    .proof p{font-size:clamp(1.15rem,1.8vw,1.5rem);line-height:1.45;font-weight:700;margin:20px 0 26px}
+    .proof .client{border-top:2px solid currentColor;padding-top:16px;font:600 .82rem "IBM Plex Mono",monospace;text-transform:uppercase}
+    .proof .client span{display:block;font-weight:500;font-size:.7rem;margin-top:5px}
+    .limits{font-weight:600;line-height:1.7}
+    .limits li{margin-bottom:8px}
+    details{border:2px solid var(--line);background:var(--panel);padding:20px 22px;margin-bottom:14px}
+    details summary{font:600 .95rem "IBM Plex Mono",monospace;text-transform:uppercase;cursor:pointer}
+    details p{line-height:1.6;font-weight:600;margin:14px 0 0}
+    .form-wrap{display:grid;grid-template-columns:minmax(0,.78fr) minmax(420px,1.22fr);gap:52px;align-items:start}
+    .form-intro{position:sticky;top:28px}
+    .form-intro h2{font:400 clamp(2.2rem,4.5vw,4rem)/.95 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:18px 0 24px}
+    .form-intro p{font-size:1.05rem;line-height:1.55;font-weight:600;max-width:43ch;margin:0 0 20px}
+    .contact-form{border:2px solid var(--line);background:var(--panel);box-shadow:var(--shadow);padding:30px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .field{display:grid;gap:8px;margin-bottom:18px}
+    .field label{font:600 .72rem "IBM Plex Mono",monospace;text-transform:uppercase}
+    .field input,.field select,.field textarea{width:100%;border:2px solid var(--line);border-radius:0;background:var(--paper);color:var(--ink);padding:13px 14px;font:600 1rem/1.35 "Public Sans",sans-serif;outline:none}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--red);box-shadow:3px 3px 0 var(--red)}
+    .field input::placeholder{color:var(--muted);opacity:.78}
+    .required{color:var(--red)}
+    .form-submit{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;border:2px solid #111;padding:15px 17px;background:var(--yellow);color:#111;box-shadow:4px 4px 0 #111;cursor:pointer;font:600 .8rem "IBM Plex Mono",monospace;text-transform:uppercase;transition:transform .2s}
+    .form-submit:hover{transform:translate(3px,3px);box-shadow:1px 1px 0 #111}
+    .form-submit:disabled{cursor:wait;opacity:.7}
+    .form-status{display:none;margin:18px 0 0;border:2px solid var(--line);padding:12px 14px;font:600 .76rem/1.5 "IBM Plex Mono",monospace}
+    .form-status.show{display:block}
+    .form-status.success{background:var(--blue);color:#111;border-color:#111}
+    .form-status.error{background:var(--pink);color:#111;border-color:#111}
+    .bot-field{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(1px,1px,1px,1px)!important;white-space:nowrap!important}
+    .form-note{font:600 .72rem/1.6 "IBM Plex Mono",monospace;text-transform:uppercase;color:var(--muted);margin-top:16px}
+    footer{border-top:2px solid var(--line);display:flex;justify-content:space-between;gap:30px;padding:24px 0 38px;font:500 .75rem "IBM Plex Mono",monospace;text-transform:uppercase}
+    .footer-name{font-weight:600}
+    @media (max-width: 900px){
+      .section-head{grid-template-columns:1fr;gap:14px}
+      .checks{grid-template-columns:1fr}
+      .check{border-left:0!important;min-height:0}
+      .check:nth-child(n+2){border-top:2px solid var(--line)}
+      .steps{grid-template-columns:1fr}
+      .step{border-left:0!important}
+      .step:nth-child(n+2){border-top:2px solid var(--line)}
+      .work-cards{grid-template-columns:1fr}
+      .form-wrap{grid-template-columns:1fr}
+      .form-intro{position:static}
+    }
+    @media (max-width: 640px){
+      .nav{width:calc(100% - 24px)}
+      main{width:calc(100% - 24px)}
+      .nav-links{gap:12px}
+      .nav-links a:not(:first-child):not(:last-child){display:none}
+      .form-row{grid-template-columns:1fr;gap:0}
+      .contact-form{padding:20px;box-shadow:4px 4px 0 var(--ink)}
+      footer{flex-direction:column;padding-bottom:28px}
+    }
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.status i{animation:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-links"><a class="nav-brand" href="/">Deploy &amp; Donuts</a><a href="/#projects">Selected work</a><a href="/#work">What we do</a><a href="/#testimonials">Client stories</a><a href="/#founder">Founder</a><a href="/#contact">Contact</a></div>
+    <div class="status"><i aria-hidden="true"></i>Taking on 2 new projects</div>
+  </nav>
+
+  <main id="main">
+    <section class="lp-hero" aria-labelledby="page-title">
+      <div class="stamp">Free website audit / Checked by hand, not by a scan</div>
+      <h1 id="page-title">Get a free website audit, done by hand.</h1>
+      <p class="lp-sub">One website, reviewed by the founder, in plain English. You get what is costing you customers, in priority order, then we walk through the fixes together on a 15-minute call.</p>
+      <div class="lp-cta-row">
+        <a class="cta-link" href="#audit-form"><span>Claim your free website audit</span><b>↗</b></a>
+        <a class="cta-link cta-ghost" href="/"><span>Back to the homepage</span><b>↑</b></a>
+      </div>
+      <p class="trust-line">One audit per business · No obligation · 10 years in web design &amp; SEO</p>
+    </section>
+
+    <section class="section" aria-labelledby="checks-title">
+      <div class="section-head"><div class="index">01 / What you get</div><h2 id="checks-title">Six checks. One clear list of fixes.</h2></div>
+      <div class="checks">
+        <article class="check"><span class="check-num">01</span><h3>Broken pages</h3><p>Are pages missing, broken, or leading nowhere, and is your best work even reachable?</p></article>
+        <article class="check"><span class="check-num">02</span><h3>Titles</h3><p>Do your page titles say what the page does, in the words customers search for, or are they blank and generic?</p></article>
+        <article class="check"><span class="check-num">03</span><h3>Descriptions</h3><p>Do your meta descriptions earn the click, or do they read like they were never written?</p></article>
+        <article class="check"><span class="check-num">04</span><h3>Images</h3><p>Are your images described properly, sized right, and helping the page, or slowing it down and saying nothing to Google?</p></article>
+        <article class="check"><span class="check-num">05</span><h3>Speed</h3><p>Does your site load fast enough on a phone, or are visitors leaving before they ever see your offer?</p></article>
+        <article class="check"><span class="check-num">06</span><h3>Mobile &amp; contact</h3><p>Does the site work on a phone, and can a visitor find your contact button in seconds, or is it buried?</p></article>
+      </div>
+      <div class="note-strip">The audit also flags <b>spelling mistakes, thin content, and dead blog pages</b> where they exist, because those are the fixes with the most scope for improvement.</div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="section-head"><div class="index">02 / How it works</div><h2 id="how-title">Three steps. No jargon fog.</h2></div>
+      <div class="steps">
+        <article class="step"><div class="step-num">01</div><h3>You submit the form</h3><p>Your name, business, and your website URL. That is all we need to start.</p></article>
+        <article class="step"><div class="step-num">02</div><h3>We review it by hand</h3><p>Yash Dalmia, the founder, reviews your site himself and writes the findings in priority order, in plain English.</p></article>
+        <article class="step"><div class="step-num">03</div><h3>We walk through it on a call</h3><p>You get the findings by email, then a 15-minute call to walk through the fixes and discuss what comes next.</p></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="not-title">
+      <div class="not-panel">
+        <h3 id="not-title">What this is not</h3>
+        <ul>
+          <li>Not an automated scan. No instant score, no fake grades.</li>
+          <li>Not a $5 gig report. A real audit of your real website, by a real person.</li>
+          <li>Not a sales trap. The audit finds the problems. Fixing them is the paid service, quoted on the call.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="proof-title">
+      <div class="section-head"><div class="index">03 / Proof</div><h2 id="proof-title">Real work. Real words.</h2></div>
+      <div class="work-cards">
+        <article class="work-card">
+          <div class="kicker">Rental commerce · Website design + build</div>
+          <h3>Turnkey Living</h3>
+          <p>Home, without the heavy lifting. A calm, premium rental storefront: browse, choose your tenure, verify, get it delivered.</p>
+          <a class="site-link" href="https://turnkeyliving.in/" target="_blank" rel="noopener noreferrer"><span>Visit live website</span><span>↗</span></a>
+        </article>
+        <article class="work-card">
+          <div class="kicker">Pet commerce · Website design + build</div>
+          <h3>HygienicPet</h3>
+          <p>Pet essentials, at walkies speed. Trusted pet-care products delivered quickly, with the categories people need easy to reach.</p>
+          <a class="site-link" href="https://hygienicpet.com/" target="_blank" rel="noopener noreferrer"><span>Visit live website</span><span>↗</span></a>
+        </article>
+      </div>
+      <div class="proof" style="margin-top:28px">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p>The Deploy &amp; Donuts team did great work. The website looks cool, our Google Business Profile is properly optimized, and phone calls improved by up to 90% after the second month of SEO.</p>
+        <div class="client">Vincent — West Hollywood<span>Website · SEO · Google Business Profile · One client. Results vary by business.</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="limits-title">
+      <div class="section-head"><div class="index">04 / Scope</div><h2 id="limits-title">The honest fine print.</h2></div>
+      <ul class="limits">
+        <li>One free audit per business. One website per audit.</li>
+        <li>The audit finds the problems. Fixing them is the paid service, quoted on the call.</li>
+        <li>The audit is a sample of the paid service, not the service itself.</li>
+        <li>Findings are emailed within 3 business days, then walked through on a 15-minute call.</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="section-head"><div class="index">05 / Questions</div><h2 id="faq-title">Before you ask.</h2></div>
+      <details>
+        <summary>What do you need from me?</summary>
+        <p>Your website URL. If your site has pages you are worried about, tell us which ones in the form and we will look at those first.</p>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <p>Findings are emailed within 3 business days of your form coming in, then walked through on a 15-minute call at a time you pick.</p>
+      </details>
+      <details>
+        <summary>Is there any obligation?</summary>
+        <p>No. The audit is free, the call is free, and the fixes are quoted on the call. If it is not a fit, you keep the findings.</p>
+      </details>
+      <details>
+        <summary>Who does the audit?</summary>
+        <p>Yash Dalmia, the founder of Deploy &amp; Donuts. Ten years in web design and SEO. The person who plans your growth is the same person who checks your site.</p>
+      </details>
+    </section>
+
+    <section class="section" id="audit-form" aria-labelledby="form-title">
+      <div class="form-wrap">
+        <div class="form-intro">
+          <div class="index">06 / Claim your audit</div>
+          <h2 id="form-title">Tell us where to look.</h2>
+          <p>Fill in the form and we will review your website by hand. Findings land in your inbox within 3 business days, with an invite to a 15-minute call.</p>
+          <p>Prefer email? Write to <a href="mailto:info@deployanddonuts.com">info@deployanddonuts.com</a> with the subject “Free website audit”.</p>
+        </div>
+        <form class="contact-form" id="audit-form-el" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="audit-name">Name <span class="required" aria-hidden="true">*</span></label>
+              <input id="audit-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="audit-email">Email <span class="required" aria-hidden="true">*</span></label>
+              <input id="audit-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="audit-business">Business name <span class="required" aria-hidden="true">*</span></label>
+              <input id="audit-business" name="business_name" type="text" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="audit-city">City and state <span class="required" aria-hidden="true">*</span></label>
+              <input id="audit-city" name="city_state" type="text" autocomplete="address-level2" placeholder="e.g. Knoxville, TN" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="audit-website">Website <span class="required" aria-hidden="true">*</span></label>
+            <input id="audit-website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="audit-type">Business type <span class="required" aria-hidden="true">*</span></label>
+              <select id="audit-type" name="business_type" required>
+                <option value="Restaurant or cafe">Restaurant or cafe</option>
+                <option value="Med spa or salon">Med spa or salon</option>
+                <option value="Dental practice">Dental practice</option>
+                <option value="Home services">Home services</option>
+                <option value="Retail shop">Retail shop</option>
+                <option value="Pet business">Pet business</option>
+                <option value="Other local business">Other local business</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="audit-budget">Monthly marketing budget <span aria-hidden="true">(optional)</span></label>
+              <select id="audit-budget" name="monthly_budget">
+                <option value="Prefer not to say">Prefer not to say</option>
+                <option value="Under $500">Under $500</option>
+                <option value="$500 to $1,000">$500 to $1,000</option>
+                <option value="$1,000 to $2,500">$1,000 to $2,500</option>
+                <option value="Over $2,500">Over $2,500</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="audit-source">How did you hear about us?</label>
+            <select id="audit-source" name="how_heard">
+              <option value="Pinterest">Pinterest</option>
+              <option value="Google search">Google search</option>
+              <option value="Referral">Referral</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <input type="hidden" name="utm_source" id="utm-source">
+          <input type="hidden" name="utm_medium" id="utm-medium">
+          <input type="hidden" name="utm_campaign" id="utm-campaign">
+          <input type="hidden" name="utm_content" id="utm-content">
+          <div class="bot-field" aria-hidden="true">
+            <label for="botcheck">Leave this field empty</label>
+            <input id="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="form-submit" type="submit"><span>Claim your free website audit</span><span aria-hidden="true">↗</span></button>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          <p class="form-note">One audit per business. Findings emailed within 3 business days, then a 15-minute call to walk through them.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer><div class="footer-name">Deploy &amp; Donuts</div><div>Built with caffeine, curiosity &amp; clean code.</div><div>© 2026</div></footer>
+  </main>
+
+  <script>
+    const WEB3FORMS_ACCESS_KEY = "d832c7ae-2a8c-40f6-a946-a359e262c8d8";
+
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      ['source', 'medium', 'campaign', 'content'].forEach(function (key) {
+        var el = document.getElementById('utm-' + key);
+        if (el && params.get('utm_' + key)) el.value = params.get('utm_' + key);
+      });
+
+      var auditForm = document.getElementById('audit-form-el');
+      var formStatus = document.getElementById('form-status');
+      var submitButton = auditForm.querySelector('.form-submit');
+      var submitLabel = submitButton.querySelector('span');
+
+      function showFormStatus(message, type) {
+        formStatus.textContent = message;
+        formStatus.className = 'form-status show ' + type;
+      }
+
+      auditForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        formStatus.className = 'form-status';
+        formStatus.textContent = '';
+
+        if (!auditForm.checkValidity()) {
+          auditForm.reportValidity();
+          return;
+        }
+
+        if (document.getElementById('botcheck').checked) {
+          auditForm.reset();
+          showFormStatus("Thanks! Your audit request is in. We will email your findings within 3 business days.", 'success');
+          return;
+        }
+
+        var formData = new FormData(auditForm);
+        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+        formData.append('subject', 'New Free Website Audit request - Deploy & Donuts');
+        formData.append('from_name', 'Deploy & Donuts website');
+        submitButton.disabled = true;
+        submitLabel.textContent = 'Sending...';
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+          .then(function (response) { return response.json(); })
+          .then(function (data) {
+            if (!data.success) {
+              throw new Error('Submission failed');
+            }
+            if (typeof gtag === 'function') {
+              gtag('event', 'generate_lead', { event_category: 'audit', event_label: 'free_website_audit' });
+            }
+            auditForm.reset();
+            showFormStatus("Thanks! Your audit request is in. We will email your findings within 3 business days, then invite you to a 15-minute call.", 'success');
+          })
+          .catch(function () {
+            showFormStatus('Something went wrong. Please try again or email info@deployanddonuts.com.', 'error');
+          })
+          .finally(function () {
+            submitButton.disabled = false;
+            submitLabel.textContent = 'Claim your free website audit';
+          });
+      });
+    }());
+  </script>
+</body>
+</html>
