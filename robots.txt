@@ -1,0 +1,19 @@
+# deployanddonuts.com — robots.txt (READY TO DEPLOY, 21 Nov 2026)
+# Replaces the current Vercel-default file, which has NO User-agent rules
+# and NO Sitemap line. The EU content-signal reservation block is kept
+# below as comments, unchanged in meaning.
+# Place at repo root: deploy-donuts-site/robots.txt (Vercel serves it at /robots.txt)
+
+User-agent: *
+Allow: /
+
+# Sitemap for all crawlers (Google, Bing, Yahoo, DuckDuckGo via Bing, Yandex)
+Sitemap: https://deployanddonuts.com/sitemap.xml
+
+# --- Content signals (EU Directive 2019/790, Art. 4 reservation) ---
+# search:   building a search index and providing search results.
+#           Search does not include providing AI-generated search summaries.
+# ai-input: inputting content into AI models (RAG, grounding, generative AI search answers).
+# ai-train: training or fine-tuning AI models.
+# No content-signal line below = neither granted nor restricted via content
+# signal for that use. (Kept from the previous Vercel-default file.)
