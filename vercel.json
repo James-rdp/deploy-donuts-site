@@ -26,6 +26,11 @@
       "permanent": true
     },
     {
+      "source": "/services",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
