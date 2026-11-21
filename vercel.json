@@ -16,6 +16,16 @@
       "permanent": true
     },
     {
+      "source": "/local-seo",
+      "destination": "/local-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/website-design",
+      "destination": "/website-design/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
