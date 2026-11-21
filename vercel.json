@@ -1,0 +1,30 @@
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/free-gbp-audit",
+      "destination": "/free-gbp-audit/",
+      "permanent": true
+    },
+    {
+      "source": "/free-website-audit",
+      "destination": "/free-website-audit/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.deployanddonuts.com"
+        }
+      ],
+      "destination": "https://deployanddonuts.com/:path*",
+      "permanent": true
+    }
+  ]
+}
